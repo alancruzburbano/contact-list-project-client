@@ -1,0 +1,33 @@
+<mat-card>
+  <div class="custom-container">
+    <mat-form-field appearance="outline">
+      <mat-select [(ngModel)]="origin" placeholder="Select Origin" panelClass="custom-panel-blue" (change)="readDataFrom(origin)">
+        <mat-option value="file">File</mat-option>
+        <mat-option value="db">Database</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput [(ngModel)]="filtertext"  placeholder="Search..." [disabled]="contacts==null ? true : false">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-select [(ngModel)]="itemsNumber" placeholder="Items to show" panelClass="custom-panel-blue" [disabled]="origin==null ? true : false">
+        <mat-option value="5">5</mat-option>
+        <mat-option value="10">10</mat-option>
+        <mat-option value="20">20</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</mat-card>
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let contact of contacts | findby: filtertext | paginate: { itemsPerPage: itemsNumber, currentPage: p }">
+        <img mat-list-avatar [src]='sanitizeAvatarUrl(contact.urlAvatar)' alt="{{contact.name}}">
+        <h3 mat-line>{{contact.name}}</h3>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+    <pagination-controls (pageChange)="p =$event"  autoHide="contacts==null ? true : false"></pagination-controls>
+  </mat-card-content>
+</mat-card>
