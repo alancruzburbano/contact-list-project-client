@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/@angular/material/prebuilt-themes/purple-green.css";
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import "./personalized-styles.css";
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 
 body {
  margin: 0;
@@ -27,4 +28,7 @@ footer {
 
 .custom-container > * {
     width: 50%;
-  }
+  } 
+.fontGloria{
+    font-family: 'Gloria Hallelujah', serif;    
+}
