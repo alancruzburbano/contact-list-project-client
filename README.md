@@ -20,6 +20,8 @@ npm install && npm start
 
 Once server application is running please go to browser and type http://localhost:4200/ you should see the application interface
 
+![Alt text](/src/assets/screenshoots/app1.png)
+![Alt text](/src/assets/screenshoots/app2.png)
 
 ## Help
 
