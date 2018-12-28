@@ -5,7 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination'
 import { AppComponent } from './app.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
-import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule, MatIconModule, MatSelectModule, MatOptionModule, MatGridListModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule, MatDialogModule, 
+         MatIconModule, MatSelectModule, MatOptionModule, MatGridListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FindbyPipe } from './findby.pipe';
 import { FormsModule } from '@angular/forms';
@@ -33,6 +34,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatOptionModule,
     MatRadioModule,    
     MatGridListModule,
+    MatDialogModule,
     NgxPaginationModule,
     FormsModule
   ],
